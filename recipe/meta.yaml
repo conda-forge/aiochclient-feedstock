@@ -25,6 +25,7 @@ requirements:
   run:
     - aiohttp >=3.0.1
     - python
+    - ciso8601  # [py<37]
 
 test:
   imports:
