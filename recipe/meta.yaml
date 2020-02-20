@@ -24,12 +24,17 @@ requirements:
     - python
   run:
     - aiohttp >=3.0.1
+    - sqlparse >=0.3.0
     - python
     - ciso8601  # [py<37]
 
 test:
   imports:
     - aiochclient
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: "https://github.com/maximdanilchenko/aiochclient"
