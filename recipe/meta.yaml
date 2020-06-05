@@ -1,23 +1,23 @@
 {% set name = "aiochclient" %}
-{% set version = "1.3.1" %}
+{% set version = "1.4.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 07bd37e6a4aea124113642f0c6b9698047c70d2e1f1fbffb6f23964e38542782
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: a1a29f54f6e845f624d7ea044ebb3ded3e36bbcde4801ceaa39a163707755708
 
 build:
   number: 0
-  skip: True  # [win]
-  skip: True  # [py<36]
-  script: "{{ PYTHON }} -m pip install . -vv "
+  skip: true  # [win]
+  skip: true  # [py<36]
+  script: '{{ PYTHON }} -m pip install . -vv '
 
 requirements:
   build:
-    - "{{ compiler('c') }}"
+    - {{ compiler('c') }}
   host:
     - cython
     - pip
@@ -37,12 +37,12 @@ test:
     - pip check
 
 about:
-  home: "https://github.com/maximdanilchenko/aiochclient"
-  license: "MIT"
-  license_family: "MIT"
-  license_file: "LICENSE"
-  summary: "Async http clickhouse client for python 3.6+"
-  doc_url: "https://aiochclient.readthedocs.io/"
+  home: https://github.com/maximdanilchenko/aiochclient
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: Async http clickhouse client for python 3.6+
+  doc_url: https://aiochclient.readthedocs.io/
 
 extra:
   recipe-maintainers:
