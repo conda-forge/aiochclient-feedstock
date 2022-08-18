@@ -1,5 +1,5 @@
 {% set name = "aiochclient" %}
-{% set version = "2.1.0" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a590e0103a55a2dc7dda4b350183ad0ef77f9b23f5a95bd1b7982e8f9bec4e00
+  sha256: 8212f287cb6f5fce6132950f62cd918e8646d3f68de69a419a74abf5d66f65e2
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   skip: true  # [py<36]
   script: '{{ PYTHON }} -m pip install . -vv '
