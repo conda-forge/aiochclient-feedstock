@@ -1,11 +1,11 @@
-About aiochclient
-=================
+About aiochclient-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/aiochclient-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/maximdanilchenko/aiochclient
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/aiochclient-feedstock/blob/main/LICENSE.txt)
 
 Summary: Async http clickhouse client for python 3.6+
 
