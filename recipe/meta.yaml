@@ -10,23 +10,23 @@ source:
   sha256: c8f7b846cea0792489b3ad981e2b2678a0c4f0ab5555c648367e33008aba28e4
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
-  skip: true  # [py<36]
   script: '{{ PYTHON }} -m pip install . -vv '
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - cython
     - pip
     - python
+    - setuptools
   run:
     - aiohttp >=3.0.1
     - sqlparse >=0.3.0
     - python
-    - ciso8601  # [py<37]
 
 test:
   imports:
